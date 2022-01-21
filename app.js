@@ -5,14 +5,17 @@ const cors = require("cors");
 require("dotenv").config();
 
 
-
+let corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
 
 // enable https when proxy on server
 app.enable('trust proxy')
 
 // middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 let transporter = nodemailer.createTransport({
   pool: true,
