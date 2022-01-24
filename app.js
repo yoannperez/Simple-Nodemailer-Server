@@ -6,7 +6,7 @@ require("dotenv").config();
 
 
 let corsOptions = {
-    origin: '*',
+    origin: process.env.CORSORIGIN,
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
 
@@ -34,8 +34,6 @@ transporter.verify((err, success) => {
 
 // Route for sending mail
 app.post("/send", function (req, res) {
-
-  console.log(req.body);
 
   let mailOptions = {
     from: `${req.body.mailerState.email}`,
