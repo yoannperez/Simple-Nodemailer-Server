@@ -10,6 +10,7 @@ let corsOptions = {
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
 
+  
 // enable https when proxy on server
 app.enable('trust proxy')
 
