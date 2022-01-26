@@ -34,6 +34,8 @@ npm install
 ```
 ## Installation des certificats
 
+ATTENTION: Pour une utilisation locale, il faudra utiliser mkcert !
+
 ```
 mkdir ssl
 cd ssl
